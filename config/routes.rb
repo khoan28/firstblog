@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :ideas
   resources :todos
   get '/todos' => 'todos#index'
   get 'welcome/index'
