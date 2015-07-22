@@ -1,0 +1,78 @@
+---
+cluster_event_service_fqdn: cf.ilabs.io
+cluster_fqdn: cf.ilabs.io
+login_service_fqdn: cf.ilabs.io
+cluster_public_ips: 10.7.0.118
+server_identity: Pod5Centos6-1.ilabs.io
+service_discovery_fqdn: 10.7.0.114
+install_root: "/var/illumio-pce"
+runtime_data_root: "/var/illumio-pce-data/runtime"
+persistent_data_root: "/var/illumio-pce-data/persistent"
+ephemeral_data_root: "/tmp/illumio"
+log_dir: "/var/illumio-pce-data/log"
+front_end_https_port: 8443
+front_end_login_https_port: 8443
+front_end_event_service_port: 8444
+ven_repo_url: https://repo.illum.io/
+app_role:
+- agent_service
+- agent_traffic_redis_server
+- agent_traffic_service
+- auditable_events_service
+- collector_service
+- ev_service
+- fluentd_source_service
+- login_service
+- memcached
+- message_queue_broker
+- ops_service
+- people_service
+- service_discovery_server
+- server_load_balancer
+- sse_service
+- tmessenger_service
+database_port: 5432
+database_creds_script: "$ /var/illumio-pce/get_db_creds.sh"
+web_service_certificate: "/var/illumio-pce-data/persistent/star_ilabs.io.bundle.crt"
+event_service_certificate: "/var/illumio-pce-data/persistent/star_ilabs.io.bundle.crt"
+dynamic_configuration_certificate: "/var/illumio-pce-data/persistent/star_ilabs.io.bundle.crt"
+web_service_private_key_script: "$ /var/illumio-pce/get_rsa_private_key.sh"
+event_service_private_key_script: "$ /var/illumio-pce/get_rsa_private_key.sh"
+dynamic_configuration_private_key_script: "$ /var/illumio-pce/get_rsa_private_key.sh"
+private_key_cache_dir: "/tmp"
+trusted_ca_dir: "/etc/ssl/certs"
+service_discovery_ports:
+  public_ports:
+  - 8300
+  - 8301
+  - 8302
+  localhost_ports:
+  - 8400
+  - 8500
+service_discovery_encryption_key: "60h9ACGeLksZXkG50tkcDw=="
+smtp_relay_address: 127.0.0.1:25
+internal_agent_service_port: 8080
+internal_agent_traffic_service_port: 3200
+internal_agent_traffic_redis_server_ports:
+- 6100
+internal_collector_service_port: 3100
+internal_login_service_port: 3300
+internal_memcached_port: 11211
+internal_ops_service_port: 8080
+internal_people_service_port: 8080
+internal_set_server_redis_server_ports:
+- 6000
+internal_sse_service_port: 3000
+login_interservice_authn_key_script: "$ /var/illumio-pce/get_login_interservice_key.sh"
+ven_repo_ips:
+- 204.51.153.0/27
+database_address: 127.0.0.1
+trusted_ca_bundle: "/etc/ssl/certs/ca-bundle.crt"
+dynamic_conf_fqdn: cf.ilabs.io
+cluster_public_ips:
+  cluster_fqdn:
+    - 10.7.0.118
+    - 10.7.0.114
+  cluster_event_service_fqdn:
+    - 10.7.0.118
+    - 10.7.0.114

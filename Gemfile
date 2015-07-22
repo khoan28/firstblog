@@ -7,6 +7,8 @@ gem 'rails', '4.2.3'
 gem 'sqlite3'
 # add by railsgirs.com below
 gem 'carrierwave'
+# khoa add for agent_table.rb
+gem 'awesome_print'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets

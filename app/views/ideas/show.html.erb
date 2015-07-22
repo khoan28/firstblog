@@ -12,8 +12,21 @@
 
 <p>
   <strong>Picture:</strong>
-  <%= image_tag(@idea.picture_url, :width => 600) if @idea.picture.present? %>
+  <%= image_tag(@idea.picture_url, :width => 300) if @idea.picture.present? %>
 </p>
+
+<p>
+<% agent_tar_file = "public/#{@idea.picture_url}" %>
+
+<% get_file("#{agent_tar_file}") %>
+
+<% @test.each do |t| %>
+<%= t %> <br>
+<% end %>
+</p>
+
+
+
 
 <%= link_to 'Edit', edit_idea_path(@idea) %> |
 <%= link_to 'Back', ideas_path %>
