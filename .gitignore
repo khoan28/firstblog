@@ -17,4 +17,4 @@
 /tmp
 
 # Ignore public folder
-/public/uploads/idea
+/public/uploads/idea/*

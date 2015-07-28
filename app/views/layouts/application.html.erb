@@ -5,8 +5,11 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <link rel="stylesheet" href="//railsgirls.com/assets/bootstrap.css">
-  <link rel="stylesheet" href="//railsgirls.com/assets/bootstrap-theme.css"> 
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="//railsgirls.com/assets/bootstrap.css"> -->
+  <!-- <link rel="stylesheet" href="//railsgirls.com/assets/bootstrap-theme.css"> -->
 </head>
 <body>
 
@@ -23,15 +26,22 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">The Idea app</a>
+      <a class="navbar-brand" href="/">The Agent app</a>
     </div>
-    <div class="collapse navbar-collapse">
+    <div class="collapse navbar-collapse" id="navbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="/ideas">Ideas</a></li>
+        <li role="presentation" class="active"><a href="/ideas">Agent Viewer</a></li>
+        <li class="active"><a href="/messages">Post Message</a></li>
       </ul>
     </div>
+    
   </div>
 </nav>
+
+
+
+
+
 
 <footer>
   <div class="container">

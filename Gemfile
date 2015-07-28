@@ -5,10 +5,14 @@ source 'https://rubygems.org'
 gem 'rails', '4.2.3'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
-# add by railsgirs.com below
+# add by railsgirls.com below
 gem 'carrierwave'
 # khoa add for agent_table.rb
 gem 'awesome_print'
+# khoa add bootstrap
+gem 'bootstrap-sass', '~> 3.3.5'
+# khoa add autoprefixer
+gem 'autoprefixer-rails'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
